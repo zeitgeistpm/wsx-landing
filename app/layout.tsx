@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen flex flex-col justify-between lg:px-14 ${inter.className}`}>
+      <body className={`min-h-screen py-10 ${inter.className}`}>
         <Navigation />
         {children}
         <EmailSubscribe className="lg:hidden" />
