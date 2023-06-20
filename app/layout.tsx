@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen py-10 ${inter.className}`}>
+      <body className={`min-h-screen flex flex-col py-10 ${inter.className}`}>
         <Navigation />
         {children}
         <Footer />

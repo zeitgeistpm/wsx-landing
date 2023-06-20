@@ -24,7 +24,7 @@ export default function EmailSubscribe({ className }: { className?: string }) {
     response.status === 201 ? setEmailResponse("Success! You're on the list.") : setEmailResponse("Email already exists.")
   }
   return (
-    <div className={`flex flex-col justify-center bg-black p-8 mb-8 w-full md:max-w-[650px] mx-auto lg:w-fit ${className}`}>
+    <div className={`flex flex-col justify-center bg-black p-12 mb-8 w-full md:max-w-[650px] mx-auto lg:w-fit ${className}`}>
       <span className="text-white xl:whitespace-nowrap mb-5 font-extrabold text-center lg:text-start">Subscribe for Updates</span>
       <form onSubmit={signUp} className="flex flex-col md:flex-row items-center gap-5 w-full" id="form">
         <div className="w-full">
