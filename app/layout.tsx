@@ -1,10 +1,8 @@
 import "./styles/globals.css"
-import { Inter } from "next/font/google"
 import Navigation from "./components/header/navigation"
 import Footer from "./components/footer/footer"
 import EmailSubscribe from "./components/email-subscribe"
-
-const inter = Inter({ subsets: ["latin"] })
+import { inter } from "./fonts/fonts"
 
 export const metadata = {
   title: "Zeitgeist | Washington Stock Exchange",
@@ -17,7 +15,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`min-h-screen py-10 ${inter.className}`}>
         <Navigation />
         {children}
-        <EmailSubscribe className="lg:hidden" />
         <Footer />
       </body>
     </html>

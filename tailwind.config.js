@@ -13,6 +13,10 @@ module.exports = {
         },
         gray: {
           DEFAULT: "#757575"
+        },
+        blue: {
+          DEFAULT: "#0038FF",
+          dark: "#555555"
         }
       }
     }
