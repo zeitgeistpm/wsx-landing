@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-39WJ7YX34S');
+          gtag('config', 'G-39WJ7YX34S',{ 'debug_mode':true });
         `}
       </Script>
       <body className={`min-h-screen flex flex-col py-10 ${inter.className}`}>
