@@ -1,6 +1,12 @@
 import React from "react"
 import EmailSubscribe from "@/app/components/email-subscribe"
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "The WSX",
+  description: "..."
+}
 
 const HomePage: React.FC = () => {
   return (
