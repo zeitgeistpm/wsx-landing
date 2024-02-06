@@ -12,7 +12,6 @@ export default function EmailSubscribe({ className }: { className?: string }) {
 
   const signUp = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(email)
     const response = await fetch("https://emails.zeitgeist.pm/wsx-subscribe", {
       method: "POST",
       headers: {
@@ -21,7 +20,8 @@ export default function EmailSubscribe({ className }: { className?: string }) {
       },
       body: JSON.stringify({ email: email })
     })
-    response.status === 201 ? setEmailResponse("Success! You're on the list.") : setEmailResponse("Email already exists.")
+    console.log(await response)
+    response.status === 201 || response.status === 204 ? setEmailResponse("Success! You're on the list.") : setEmailResponse("Error adding email. Please try again later.")
   }
   return (
     <div className={`flex flex-col justify-center bg-black p-12 mb-8 w-full md:max-w-[650px] mx-auto lg:w-fit ${className}`}>
